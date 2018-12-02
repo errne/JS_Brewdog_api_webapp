@@ -1,0 +1,8 @@
+body {
+  background: linear-gradient(to left, #fdc830, #f37335);
+  color: white;
+}
+
+h2 {
+  cursor: pointer; 
+}
