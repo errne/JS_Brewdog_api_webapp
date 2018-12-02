@@ -7,12 +7,11 @@ const BeerView = function (container) {
 BeerView.prototype.render = function (beer) {
   const container = document.createElement('div');
   container.classList.add('beer');
-  const link = document.createElement('a');
   const beerName = document.createElement('h2');
   beerName.textContent = beer.name || beer.error;
   beerName.setAttribute('id', `${beer.id}`);
-  link.appendChild(beerName);
-  container.appendChild(link);
+  container.appendChild(beerName);
+  
   const beerDescription = document.createElement('p');
   beerDescription.textContent = beer.description || beer.error;
   container.appendChild(beerDescription);
@@ -22,6 +21,10 @@ BeerView.prototype.render = function (beer) {
   const beerDate = document.createElement('p');
   beerDate.textContent = `First brewed: ${beer.first_brewed || beer.error}`;
   container.appendChild(beerDate);
+  const beerImage = document.createElement('img');
+  beerImage.setAttribute('src', beer.image_url|| beer.error);
+  beerImage.classList.add('image');
+  container.appendChild(beerImage);
 
   this.parentContainer.appendChild(container);
 };

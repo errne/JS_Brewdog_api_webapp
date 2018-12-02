@@ -1,8 +1,13 @@
 body {
   background: linear-gradient(to left, #fdc830, #f37335);
   color: white;
+  margin-left: 50px;
 }
 
 h2 {
-  cursor: pointer; 
+  cursor: pointer;
+}
+
+.image {
+  height: 200px;
 }
